@@ -58,7 +58,7 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
+            z-index: 1000; /* Garantisce che la finestra modale sia sopra gli altri contenuti */
             left: 0;
             top: 0;
             width: 100%;
@@ -76,17 +76,20 @@
             object-fit: contain;
             border-radius: 15px; /* Aggiunto angolo curvo per l'immagine modale */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombra per l'immagine modale */
+            margin-top: 10px; /* Spazio tra l'immagine e la X */
         }
 
         .close {
             position: absolute;
-            top: 15px;
+            top: 10px; /* Posiziona la X sopra l'immagine */
             right: 35px;
             color: #F5E3B3;
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
+            z-index: 1001; /* Garantisce che la X sia sopra l'immagine */
         }
+
         .close:hover,
         .close:focus {
             color: #BB8B4B;
@@ -129,7 +132,6 @@
             td[colspan="2"] {
                 font-size: 20px; /* Riduce la dimensione del testo nel footer */
             }
-			
         }
     </style>
 </head>
@@ -207,6 +209,5 @@
     </script>
 </body>
 </html>
-
 
 
