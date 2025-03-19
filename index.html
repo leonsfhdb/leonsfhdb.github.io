@@ -14,51 +14,70 @@
             margin: 0;
             padding: 0;
         }
-        table {
-            width: 55%; /* Default width */
-            border-collapse: collapse;
+
+        /* Container generale */
+        .container {
+            width: 55%;
             margin: auto;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
-        th {
-            padding: 20px;
-            text-align: center;
-            background-color: #4B3621;
-            color: #F5E3B3;
-            font-size: 2em;
-            text-transform: uppercase;
-        }
-        td {
-            padding: 56px;
-            font-size: 24px;
-            background-color: #B5D78F;
-            text-align: center;
-            color: #3E3E3E;
-            border: none;
-        }
+
+        /* Titolo principale */
         h1 {
+            color: #F5E3B3;  /* Colore del testo uguale alla sezione title */
+            padding: 20px;
             font-size: 48px;
             text-align: center;
-            margin-top: 20px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            background-color: #4B3621;
             color: #F5E3B3;
+            padding: 20px;
+            font-size: 2em;
+            text-align: center;
+            text-transform: uppercase;
         }
-        img {
-            width: 100%;
+
+        .content {
+            background-color: #B5D78F;
+            color: #3E3E3E;
+            padding: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .gameplay-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+			background-color: #B5D78F
+        }
+
+        .gameplay-images img {
+            width: 45%;
             height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 15px; /* Curva gli angoli delle immagini */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aggiunge ombra all'immagine */
-            transition: transform 0.3s ease-in-out; /* Aggiunge effetto di ingrandimento al passaggio del mouse */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
         }
-        img:hover {
-            transform: scale(1.1); /* Ingigantisce l'immagine quando ci si passa sopra */
+
+        .gameplay-images img:hover {
+            transform: scale(1.1);
         }
+
         /* Modal styling */
         .modal {
             display: none;
             position: fixed;
-            z-index: 1000; /* Garantisce che la finestra modale sia sopra gli altri contenuti */
+            z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
@@ -74,20 +93,19 @@
             max-width: 90%;
             max-height: 80vh;
             object-fit: contain;
-            border-radius: 15px; /* Aggiunto angolo curvo per l'immagine modale */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombra per l'immagine modale */
-            margin-top: 10px; /* Spazio tra l'immagine e la X */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
         .close {
             position: absolute;
-            top: 10px; /* Posiziona la X sopra l'immagine */
+            top: 10px;
             right: 35px;
             color: #F5E3B3;
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
-            z-index: 1001; /* Garantisce che la X sia sopra l'immagine */
+            z-index: 1001;
         }
 
         .close:hover,
@@ -96,95 +114,114 @@
         }
 
         /* Stile per il footer */
-        td[colspan="2"] {
+        .footer-text {
             font-size: 28px;
             color: rgba(0, 0, 0, 0.7);
+            text-align: center;
         }
 
         /* Media query per dispositivi mobili */
         @media only screen and (max-width: 600px) {
             body {
-                background-color: #6E4B3A;
-                padding: 0 10px; /* Riduce il padding sui dispositivi mobili */
+                padding: 0 10px;
             }
 
             h1 {
-                font-size: 36px; /* Riduce la dimensione del titolo su mobile */
+                font-size: 36px;
             }
 
-            table {
-                width: 100%; /* Adatta la tabella a schermi piccoli */
+            .container {
+                width: 100%;
                 margin: 10px 0;
             }
 
-            td {
-                padding: 20px; /* Riduce il padding per fare più spazio */
-                font-size: 18px; /* Riduce la dimensione del testo */
+            .content {
+                font-size: 18px;
             }
 
-            img {
-                width: 100%; /* Rende le immagini più larghe su schermi piccoli */
-                height: auto;
-                max-width: 300px; /* Limita la larghezza dell'immagine */
+            .gameplay-images img {
+                width: 100%;
+                max-width: 300px;
                 margin: 10px 0;
             }
 
-            td[colspan="2"] {
-                font-size: 20px; /* Riduce la dimensione del testo nel footer */
+            .footer-text {
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
     <h1><b>The Knight's Trial: Quest for the Blade</b></h1>
-    <table>
-        <tr>
-            <th colspan="2">Game details</th>
-        </tr>
-    </table>
-    <br>
-    <table>
-        <tr>
-            <td>DESCRIPTION<br><br>The Knight's Trial: Quest for the Blade (or TKT:QFTB)
-            is an exciting 2D platformer created by two passionate 
-            high school students. In this game, you play as a knight 
-            on a quest to obtain the Legendary Sword. To unlock it, 
-            you'll need to complete a series of challenging levels 
-            filled with obstacles, enemies, and puzzles. This is the 
-            full game, we made it hard on purpose, don't worry! 
-            We can't wait for you to join us on this journey! 
-            If you find any issues or bugs, let us know, you can 
-            contact us via Discord, just send a friend request to
-            this username: leo.nsfhdb!</td>
-        </tr>
-    </table>
-    <br>
-    <table>
-        <tr>
-            <td>DOWNLOAD<br><br><a href="https://leonsfhdb.itch.io/the-knights-trial-quest-for-the-blade" target="_new">Click here to download</a></td>
-        </tr>
-    </table>
-    <br>
-    <table>
-        <tr>
-            <td colspan="2">GAMEPLAY</td>
-        </tr>
-        <tr>
-            <td><img src="foto1.png" onclick="openModal(this)"></td>
-            <td><img src="foto2.png" onclick="openModal(this)"></td>
-        </tr>
-		<tr>
-            <td><img src="foto3.png" onclick="openModal(this)"></td>
-            <td><img src="foto4.png" onclick="openModal(this)"></td>
-        </tr>
-		<tr>
-            <td><img src="foto5.png" onclick="openModal(this)"></td>
-            <td><img src="foto6.png" onclick="openModal(this)"></td>
-        </tr>
-		<tr>
-            <td colspan="2" style="font-size: 28px; color: rgba(0, 0, 0, 0.7);"><i>by Leo and Nico</i></td>
-        </tr>
-    </table>
+
+    <div class="container">
+        <!-- Section "Game Details" -->
+        <div class="section">
+            <div class="section-title">Game details</div>
+            <div class="content">
+                <p>The Knight's Trial: Quest for the Blade (or TKT:QFTB) is an exciting 2D platformer created by two passionate high school students. In this game, you play as a knight on a quest to obtain the Legendary Sword. To unlock it, you'll need to complete a series of challenging levels filled with obstacles, enemies, and puzzles. This is the full game, we made it hard on purpose, don't worry! We can't wait for you to join us on this journey! If you find any issues or bugs, let us know, you can contact us via Discord, just send a friend request to this username: leo.nsfhdb!</p>
+            </div>
+        </div>
+
+        <!-- Section "Download" -->
+        <div class="section">
+            <div class="section-title">Download</div>
+            <div class="content">
+                <a href="https://leonsfhdb.itch.io/the-knights-trial-quest-for-the-blade" target="_new">Click here to download</a>
+            </div>
+        </div>
+
+        <!-- Section "Gameplay" -->
+        <div class="section">
+            <div class="section-title">Gameplay</div>
+            <div class="gameplay-images">
+                <img src="foto1.png" onclick="openModal(this)">
+                <img src="foto2.png" onclick="openModal(this)">
+            </div>
+            <div class="gameplay-images">
+                <img src="foto3.png" onclick="openModal(this)">
+                <img src="foto4.png" onclick="openModal(this)">
+            </div>
+            <div class="gameplay-images">
+                <img src="foto5.png" onclick="openModal(this)">
+                <img src="foto6.png" onclick="openModal(this)">
+            </div>
+        </div>
+    
+	
+	<div class="section">
+            <div class="section-title">Credits</div>
+			<div class="content">
+                Creators: Leo and Nico<br><br>
+
+				Itch username: <a href="https://leonsfhdb.itch.io">leo.nsfhdb</a><br><br>
+
+				Game assets:<br><br>
+
+				<a href="https://kevins-moms-house.itch.io">Kevin's Mom's House</a>: slimes, knight, coins, platforms<br><br>
+
+				<a href="https://foozlecc.itch.io">Foozle</a>: Animated traps<br><br>
+
+				<a href="https://ankousse26.itch.io">ankousse26</a>: animated flag<br><br>
+
+				<a href="https://itch.io/profile/fliflifly">VampireGirl</a>: hearts<br><br>
+
+				<a href="https://omniclause.itch.io">Omniclause</a>: spike<br><br>
+
+				<a href="https://pimen.itch.io">pimen</a>: swords effects<br><br>
+
+				<a href="https://snoopethduckduck.itch.io">SnoopethDuckDuck</a>: swords models<br><br>
+
+				<a href="https://www.dafont.com/jayvee-d-enaguas.d2725">Jayvee Enaguas</a>: Fonts<br><br>
+
+				<a href="https://rottingpixels.itch.io">RottingPixel</a>: Tilesets<br><br>
+
+				<a href="https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA">Brackeys</a> and Sofia Thirslund</a>: music<br><br>
+
+				<a href="https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA">Brackeys</a> and Asbjorn Thirslund: sounds effect<br><br>
+            </div>
+    </div>
+	</div>
 
     <!-- Modal -->
     <div id="myModal" class="modal">
@@ -209,5 +246,3 @@
     </script>
 </body>
 </html>
-
-
