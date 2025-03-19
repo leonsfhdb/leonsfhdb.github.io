@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+    <title>The Knight's Trial: Quest for the Blade</title>
+    <style>
+        body {
+            background-color: #6E4B3A;
+            font-family: 'Tiny5', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 55%; /* Default width */
+            border-collapse: collapse;
+            margin: auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        th {
+            padding: 20px;
+            text-align: center;
+            background-color: #4B3621;
+            color: #F5E3B3;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+        td {
+            padding: 56px;
+            font-size: 24px;
+            background-color: #B5D78F;
+            text-align: center;
+            color: #3E3E3E;
+            border: none;
+        }
+        h1 {
+            font-size: 48px;
+            text-align: center;
+            margin-top: 20px;
+            color: #F5E3B3;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 15px; /* Curva gli angoli delle immagini */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aggiunge ombra all'immagine */
+            transition: transform 0.3s ease-in-out; /* Aggiunge effetto di ingrandimento al passaggio del mouse */
+        }
+        img:hover {
+            transform: scale(1.1); /* Ingigantisce l'immagine quando ci si passa sopra */
+        }
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow: auto;
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 15px; /* Aggiunto angolo curvo per l'immagine modale */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombra per l'immagine modale */
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #F5E3B3;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: #BB8B4B;
+        }
+
+        /* Stile per il footer */
+        td[colspan="2"] {
+            font-size: 28px;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Media query per dispositivi mobili */
+        @media only screen and (max-width: 600px) {
+            body {
+                background-color: #6E4B3A;
+                padding: 0 10px; /* Riduce il padding sui dispositivi mobili */
+            }
+
+            h1 {
+                font-size: 36px; /* Riduce la dimensione del titolo su mobile */
+            }
+
+            table {
+                width: 100%; /* Adatta la tabella a schermi piccoli */
+                margin: 10px 0;
+            }
+
+            td {
+                padding: 20px; /* Riduce il padding per fare più spazio */
+                font-size: 18px; /* Riduce la dimensione del testo */
+            }
+
+            img {
+                width: 100%; /* Rende le immagini più larghe su schermi piccoli */
+                height: auto;
+                max-width: 300px; /* Limita la larghezza dell'immagine */
+                margin: 10px 0;
+            }
+
+            td[colspan="2"] {
+                font-size: 20px; /* Riduce la dimensione del testo nel footer */
+            }
+			
+        }
+    </style>
+</head>
+<body>
+    <h1><b>The Knight's Trial: Quest for the Blade</b></h1>
+    <table>
+        <tr>
+            <th colspan="2">Game details</th>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>DESCRIPTION<br><br>The Knight's Trial: Quest for the Blade (or TKT:QFTB)
+            is an exciting 2D platformer created by two passionate 
+            high school students. In this game, you play as a knight 
+            on a quest to obtain the Legendary Sword. To unlock it, 
+            you'll need to complete a series of challenging levels 
+            filled with obstacles, enemies, and puzzles. This is the 
+            full game, we made it hard on purpose, don't worry! 
+            We can't wait for you to join us on this journey! 
+            If you find any issues or bugs, let us know, you can 
+            contact us via Discord, just send a friend request to
+            this username: leo.nsfhdb!</td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td>DOWNLOAD<br><br><a href="https://leonsfhdb.itch.io/the-knights-trial-quest-for-the-blade" target="_new">Click here to download</a></td>
+        </tr>
+    </table>
+    <br>
+    <table>
+        <tr>
+            <td colspan="2">GAMEPLAY</td>
+        </tr>
+        <tr>
+            <td><img src="foto1.png" onclick="openModal(this)"></td>
+            <td><img src="foto2.png" onclick="openModal(this)"></td>
+        </tr>
+		<tr>
+            <td><img src="foto3.png" onclick="openModal(this)"></td>
+            <td><img src="foto4.png" onclick="openModal(this)"></td>
+        </tr>
+		<tr>
+            <td><img src="foto5.png" onclick="openModal(this)"></td>
+            <td><img src="foto6.png" onclick="openModal(this)"></td>
+        </tr>
+		<tr>
+            <td colspan="2" style="font-size: 28px; color: rgba(0, 0, 0, 0.7);"><i>by Leo and Nico</i></td>
+        </tr>
+    </table>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Funzione per aprire la modal e mostrare l'immagine ingrandita
+        function openModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        // Funzione per chiudere la modal
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
+
+
